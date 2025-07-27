@@ -5868,13 +5868,14 @@ body {
 }
 
 .spinner {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 2px solid var(--gray-300);
-  border-top-color: var(--primary-500);
+  margin: 30px auto;
+  width: 40px;
+  height: 40px;
+  border: 5px solid var(--skeleton-bg, #ddd);
+  border-top: 5px solid var(--primary-500);
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  box-shadow: 0 0 12px var(--primary-500);
 }
 
 .spinner-sm {
@@ -5923,10 +5924,16 @@ body {
 
 /* Enhanced Skeleton Loading */
 .skeleton {
-  background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-300) 50%, var(--gray-200) 75%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.5s infinite;
-  border-radius: var(--radius-base);
+  background-color: var(--skeleton-bg, #ddd);
+  border-radius: 8px;
+  height: 20px;
+  margin-bottom: 12px;
+  animation: pulse 1.5s infinite ease-in-out;
+  box-shadow: inset 0 0 6px rgb(255 255 255 / 0.8);
+}
+.skeleton.short {
+  width: 40%;
+  height: 16px;
 }
 
 .skeleton-text {
@@ -6529,21 +6536,13 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% { 
-    opacity: 1; 
-  }
-  50% { 
-    opacity: 0.5; 
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 
 @keyframes spin {
-  from { 
-    transform: rotate(0deg); 
-  }
-  to { 
-    transform: rotate(360deg); 
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes ping {
