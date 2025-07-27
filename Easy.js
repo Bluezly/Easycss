@@ -1079,4 +1079,3 @@ Events:
 
 Happy coding! 🚀
 `);
-    </script>
