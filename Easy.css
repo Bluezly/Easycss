@@ -6442,6 +6442,198 @@ body {
   color: var(--primary-600);
 }
 
+/* ===== Enhanced Code Block ===== */
+.code-block {
+  background-color: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  margin: var(--space-4) 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.code-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--gray-200);
+  border-bottom: 1px solid var(--gray-300);
+  color: var(--gray-600);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.code-block .copy-btn {
+  background-color: var(--gray-300);
+  color: var(--gray-700);
+  border: none;
+  border-radius: var(--radius-base);
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.code-block .copy-btn:hover {
+  background-color: var(--gray-400);
+  color: var(--gray-800);
+}
+
+.code-block pre {
+  margin: 0;
+  padding: var(--space-4);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--gray-800);
+}
+
+.code-block code {
+  font-family: inherit;
+}
+
+/* Syntax Highlighting - Light Mode */
+.code-block .token.comment,
+.code-block .token.prolog,
+.code-block .token.doctype,
+.code-block .token.cdata {
+  color: var(--secondary-500);
+}
+
+.code-block .token.punctuation {
+  color: var(--secondary-600);
+}
+
+.code-block .token.property,
+.code-block .token.tag,
+.code-block .token.boolean,
+.code-block .token.number,
+.code-block .token.constant,
+.code-block .token.symbol,
+.code-block .token.deleted {
+  color: var(--danger-600);
+}
+
+.code-block .token.selector,
+.code-block .token.attr-name,
+.code-block .token.string,
+.code-block .token.char,
+.code-block .token.builtin,
+.code-block .token.inserted {
+  color: var(--success-600);
+}
+
+.code-block .token.operator,
+.code-block .token.entity,
+.code-block .token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--accent-700);
+}
+
+.code-block .token.atrule,
+.code-block .token.attr-value,
+.code-block .token.keyword {
+  color: var(--primary-600);
+}
+
+.code-block .token.function,
+.code-block .token.class-name {
+  color: var(--warning-700);
+}
+
+.code-block .token.regex,
+.code-block .token.important,
+.code-block .token.variable {
+  color: var(--warning-500);
+}
+
+/* Dark Mode for Code Block */
+[data-theme="dark"] .code-block {
+  background: var(--dark-bg-secondary);
+  border-color: var(--dark-border-primary);
+  box-shadow: var(--dark-shadow-lg);
+}
+
+[data-theme="dark"] .code-block-header {
+  background-color: var(--dark-bg-primary);
+  border-bottom-color: var(--dark-border-primary);
+  color: var(--dark-text-muted);
+}
+
+[data-theme="dark"] .code-block .copy-btn {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .code-block .copy-btn:hover {
+  background-color: var(--dark-bg-quaternary);
+  color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .code-block pre {
+  color: var(--dark-text-secondary);
+}
+
+/* Syntax Highlighting - Dark Mode */
+[data-theme="dark"] .code-block .token.comment,
+[data-theme="dark"] .code-block .token.prolog,
+[data-theme="dark"] .code-block .token.doctype,
+[data-theme="dark"] .code-block .token.cdata {
+  color: var(--secondary-400);
+}
+
+[data-theme="dark"] .code-block .token.punctuation {
+  color: var(--secondary-300);
+}
+
+[data-theme="dark"] .code-block .token.property,
+[data-theme="dark"] .code-block .token.tag,
+[data-theme="dark"] .code-block .token.boolean,
+[data-theme="dark"] .code-block .token.number,
+[data-theme="dark"] .code-block .token.constant,
+[data-theme="dark"] .code-block .token.symbol,
+[data-theme="dark"] .code-block .token.deleted {
+  color: var(--danger-400);
+}
+
+[data-theme="dark"] .code-block .token.selector,
+[data-theme="dark"] .code-block .token.attr-name,
+[data-theme="dark"] .code-block .token.string,
+[data-theme="dark"] .code-block .token.char,
+[data-theme="dark"] .code-block .token.builtin,
+[data-theme="dark"] .code-block .token.inserted {
+  color: var(--success-300);
+}
+
+[data-theme="dark"] .code-block .token.operator,
+[data-theme="dark"] .code-block .token.entity,
+[data-theme="dark"] .code-block .token.url,
+[data-theme="dark"] .language-css .token.string,
+[data-theme="dark"] .style .token.string {
+  color: var(--accent-300);
+}
+
+[data-theme="dark"] .code-block .token.atrule,
+[data-theme="dark"] .code-block .token.attr-value,
+[data-theme="dark"] .code-block .token.keyword {
+  color: var(--primary-400);
+}
+
+[data-theme="dark"] .code-block .token.function,
+[data-theme="dark"] .code-block .token.class-name {
+  color: var(--warning-300);
+}
+
+[data-theme="dark"] .code-block .token.regex,
+[data-theme="dark"] .code-block .token.important,
+[data-theme="dark"] .code-block .token.variable {
+  color: var(--warning-400);
+}
+
 /* ===== ENHANCED ANIMATIONS ===== */
 @keyframes fadeIn {
   from { opacity: 0; }
